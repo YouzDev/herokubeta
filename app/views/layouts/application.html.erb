@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag 'application', media: 'all',
+  'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+  
 </head>
 <body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
 
-<%= yield %>
+      <%= link_to "sample app", '#', id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",   '#' %></li>
+          <li><%= link_to "Help",   '#' %></li>
+          <% if logged_in? %>
+          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to "Profil", current_user %></li>
+          <li><%= link_to "Paramètres", edit_user_path(current_user) %></li>
+          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          <% else %>
+          <li><%= link_to "Log in", login_path %></li>
 
+          <% end %>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </body>
 </html>

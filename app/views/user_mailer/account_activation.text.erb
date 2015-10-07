@@ -1,0 +1,10 @@
+<h1>Ceci n'est pas un titre</h1>
+
+<p>Yo <%= @user.name %>,</p>
+
+<p>
+	Bienvenue à toi padawan clique sur le lien pour activer ton compte:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+	email: @user.email) %>
