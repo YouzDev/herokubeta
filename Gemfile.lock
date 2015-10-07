@@ -37,8 +37,13 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    bcrypt (3.1.7)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     byebug (6.0.2)
     capistrano (3.4.0)
@@ -65,6 +70,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
+    faker (1.4.2)
+      i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -172,17 +179,22 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.7)
+  bootstrap-sass (= 3.2.0.0)
+  bootstrap-will_paginate (= 0.0.10)
   byebug
   capistrano (~> 3.0)
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
   coffee-rails (~> 4.1.0)
+  faker (= 1.4.2)
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
@@ -198,6 +210,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   web-console (~> 2.0)
+  will_paginate (= 3.0.7)
 
 BUNDLED WITH
    1.10.6
