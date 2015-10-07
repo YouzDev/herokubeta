@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'rails_12factor'
-#gem 'pg'
+gem 'pg'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -48,6 +48,7 @@ group :development, :production do
 	gem 'capistrano-rails'
 	gem 'capistrano-rvm'
 	gem 'rvm1-capistrano3', require: false
+
 end
 	group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
