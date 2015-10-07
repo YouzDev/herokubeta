@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  get 'users/new'
+ 
   # Routes
   
   # get 'static_pages/home'
