@@ -7,7 +7,7 @@ gem 'rails', '4.2.4'
 gem 'faker',                '1.4.2'
 gem 'bcrypt',               '3.1.7'
 # Use sqlite3 as the database for Active Record
- gem 'mysql2'
+ gem 'mysql'
  gem 'will_paginate',           '3.0.7'
  gem 'bootstrap-will_paginate', '0.0.10'
 # gem 'unicorn'
@@ -19,7 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'rails_12factor'
 gem 'pg'
-
+gem 'execjs'
+gem 'therubyracer'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
